@@ -1,0 +1,259 @@
+/********** Template CSS **********/
+:root {
+    --lapis-lazuli: #195b7fff; /* Azul escuro */
+    --penn-red: #9d0606ff; /* Vermelho escuro */
+    --white-smoke: #f5f5f5ff; /* Branco esfumaçado */
+    --black: #000000ff; /* Preto */
+}
+
+/* Font Weights */
+.fw-medium {
+    font-weight: 500 !important;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+.fw-black {
+    font-weight: 900 !important;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+    background-color: var(--lapis-lazuli); /* Fundo azul escuro */
+    color: var(--white-smoke);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.back-to-top:hover {
+    background-color: var(--penn-red); /* Troca o fundo para vermelho ao hover */
+}
+
+/* Spinner */
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+    background-color: var(--lapis-lazuli); /* Fundo azul escuro */
+    color: var(--white-smoke);
+}
+
+#spinner.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+}
+
+/* Buttons */
+.btn {
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn.btn-primary {
+    background-color: var(--lapis-lazuli); /* Fundo azul escuro */
+    color: var(--white-smoke);
+}
+
+.btn.btn-primary:hover {
+    background-color: var(--penn-red); /* Fundo vermelho ao hover */
+}
+
+.btn.btn-secondary {
+    background-color: var(--penn-red); /* Fundo vermelho */
+    color: var(--white-smoke);
+}
+
+.btn.btn-secondary:hover {
+    background-color: var(--lapis-lazuli); /* Troca para azul escuro ao hover */
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-weight: normal;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+    background-color: var(--lapis-lazuli); /* Fundo azul escuro */
+    color: var(--white-smoke);
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+    background-color: var(--lapis-lazuli); /* Fundo azul escuro */
+    color: var(--white-smoke);
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+    background-color: var(--lapis-lazuli); /* Fundo azul escuro */
+    color: var(--white-smoke);
+}
+
+/********** Navbar **********/
+.navbar {
+    background-color: var(--black); /* Fundo preto na navbar */
+    padding: 10px 0;
+}
+
+.navbar .dropdown-toggle::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 15px 0;
+    color: var(--white-smoke);
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color .3s;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--lapis-lazuli); /* Link com hover azul escuro */
+}
+
+.navbar .navbar-brand,
+.navbar a.btn {
+    height: 50px;
+    color: var(--white-smoke);
+}
+
+.navbar.sticky-top {
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+}
+
+/* Media Queries for Navbar */
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        border-top: 1px solid var(--lapis-lazuli);
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        opacity: 1;
+        visibility: visible;
+        transition: .5s;
+    }
+}
+
+/* Header Carousel */
+.header-carousel {
+    background-color: var(--lapis-lazuli); /* Fundo azul escuro para o carrossel */
+}
+
+.header-carousel .owl-carousel-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 30px rgba(0, 0, 0, .1);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--black); /* Fundo preto no rodapé */
+    padding: 40px 0;
+    color: var(--white-smoke);
+    text-align: center;
+}
+
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-smoke);
+    background-color: var(--penn-red); /* Fundo vermelho escuro */
+    border: 1px solid #FFFFFF;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--lapis-lazuli); /* Muda a cor para azul ao hover */
+    background-color: var(--white-smoke);
+}
+
+.footer .btn.btn-link {
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: var(--white-smoke);
+    font-size: 15px;
+    transition: .3s;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--lapis-lazuli); /* Azul escuro ao hover */
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--penn-red); /* Links no rodapé com cor vermelha */
+}
+
+.footer .copyright a:hover {
+    color: var(--lapis-lazuli); /* Links no rodapé com hover em azul */
+}
+
+/* NOSSOS ESTILOS */
+
+.bg-lapis-lazuli {
+    background-color: var(--lapis-lazuli);
+}
+
+.text-lapis-lazuli {
+    color: var(--lapis-lazuli);
+}

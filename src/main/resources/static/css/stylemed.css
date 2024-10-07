@@ -1,0 +1,149 @@
+:root {
+    --lapis-lazuli: #195b7fff; /* Azul escuro */
+    --penn-red: #9d0606ff; /* Vermelho escuro */
+    --white-smoke: #f5f5f5ff; /* Branco esfumaçado */
+    --black: #000000ff; /* Preto */
+}
+
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--light);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: var(--primary);
+    padding: 15px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #fff;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--secondary);
+}
+
+/* Cabeçalho principal */
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    background: url('../img/header-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+}
+
+/* Estilo da tabela de informações do usuário */
+.table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: var(--primary);
+    color: white;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tr:hover {
+    background-color: var(--light);
+}
+
+/* Botão */
+.btn {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary);
+}
+
+/* Rodapé */
+.footer {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Estilo dos elementos de container */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Campos de entrada */
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="tel"],
+.container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: border-color 0.3s;
+}
+
+.container input[type="text"]:focus,
+.container input[type="email"]:focus,
+.container input[type="tel"]:focus,
+.container textarea:focus {
+    border-color: var(--primary);
+}
